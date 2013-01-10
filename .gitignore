@@ -1,5 +1,7 @@
 bin/
 obj/
+mono/
+xamarin/
 *.dll*
 *.userprefs
 .DS_Store

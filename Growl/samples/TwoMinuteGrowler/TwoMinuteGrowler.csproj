@@ -6,44 +6,50 @@
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{052D9378-E657-4291-BC62-D98E434B6FEB}</ProjectGuid>
-    <ProjectTypeGuids>{948B3504-5B70-4649-8FE4-BDE1FB46EC69};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{42C0BBD9-55CE-4FC1-8D90-A7348ABAFB23};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>TwoMinuteGrowler</RootNamespace>
     <AssemblyName>TwoMinuteGrowler</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <LastXamMacNagTime>12/11/2012 10:22:26 PM</LastXamMacNagTime>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
+    <DebugSymbols>True</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>False</Optimize>
     <OutputPath>bin\Debug</OutputPath>
     <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <CustomCommands>
-      <CustomCommands>
-        <Command type="AfterBuild" command="mkdir -p ${TargetDir}/${SolutionName}.app/Contents/Frameworks; cp -r &lt;LINK_TO_YOUR_GROWL_FRAMEWORK&gt;/Frameworks/Growl.framework ${TargetDir}/${SolutionName}.app/Contents/Frameworks" workingdir="" externalConsole="true" />
-      </CustomCommands>
-    </CustomCommands>
+    <ConsolePause>False</ConsolePause>
+    <EnableCodeSigning>False</EnableCodeSigning>
+    <CreatePackage>False</CreatePackage>
+    <EnablePackageSigning>False</EnablePackageSigning>
+    <IncludeMonoRuntime>True</IncludeMonoRuntime>
+    <UseSGen>False</UseSGen>
+    <CodeSigningKey>Mac Developer</CodeSigningKey>
+    <PackageSigningKey>Developer ID Installer</PackageSigningKey>
+    <I18n />
+    <LinkMode>Full</LinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>False</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <ConsolePause>False</ConsolePause>
+    <EnableCodeSigning>False</EnableCodeSigning>
+    <CreatePackage>False</CreatePackage>
+    <EnablePackageSigning>False</EnablePackageSigning>
+    <IncludeMonoRuntime>False</IncludeMonoRuntime>
+    <UseSGen>False</UseSGen>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
-    <Reference Include="MonoMac">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="XamMac" />
+    <Reference Include="Xamarin.Growl">
+      <HintPath>..\..\binding\Xamarin.Growl.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
